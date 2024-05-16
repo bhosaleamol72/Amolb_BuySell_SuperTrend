@@ -1,4 +1,4 @@
-# TriexDev - SuperBuySellTrend (SBST) TradingView Trend Indicator
+# TriexDev - SuperBuySellTrend PLUS (SBST+) TradingView Trend Indicator
 
 [Base Indicator - TradingView script link](https://www.tradingview.com/script/lz0rpQtQ-TriexDev-SuperBuySellTrend/)
 
@@ -6,17 +6,68 @@
 
 ---
 
-Dig this indicator? Want to support me doing more free stuff? <a href="https://buymeacoffee.com/Triex">BuyMeACoffee</a>
-
-I am creating a (likely) paid (automatic trading) `Strategy` using this while I optimise the free indicator. Early backtests give great results. 
-Currently working on optimising the probability side - but this may take some time as I am mid other projects.
-
----
-
 Minimal but powerful.
 
 Have been using this for myself, so thought it would be nice to share publicly. Of course no script is correct 100% of the time, but this is one of if not the best in my basic tools.
 
+# [SBST Plus](https://github.com/Triex/TriexDev-SuperBuySellTrend-TradingView-Trend-Indicator/tree/master/sbst-plus) 
+_Using the "plus" version is optional, if you only want the buy/sell signals - use the "base" version._
+
+[![Chart Snapshot](https://tradingview.com/x/4fzGlOqI)](https://tradingview.com/x/4fzGlOqI)
+_With all the "+" indicators turned on, it may look a little confusing at first glance - but if you switch them on/off you should be able to quickly work out what each one is / means, as well as work out your preferences._
+
+## What are vector candles?
+Vector Candles (inspired to add from TradersReality/MT4) are candles that are color coded to indicate higher volumes, and likely flip points / direction changes, or confirmations.
+
+These are based off of PVSRA (Price, Volume, Support, Resistance Analysis)
+
+PVSRA - From MT4 source:
+
+>- Situation "Climax"
+>- Bars with volume >= 200% of the average volume of the 10 previous chart TFs, and bars
+>- where the product of candle spread x candle volume is >= the highest for the 10 previous
+>- chart time TFs.
+>- Default Colors:  Bull bars are green and bear bars are red.  
+&nbsp;
+>- Situation "Volume Rising Above Average"
+>- Bars with volume >= 150% of the average volume of the 10 previous chart TFs.
+>- Default Colors:  Bull bars are blue and bear are blue-violet.
+
+A blue or purple bar can mean the chart has reached a top or bottom. 
+High volume bars during a movement can indicate a big movement is coming - or a top/bottom if bulls/bears are unable to break that point - or the volume direction has flipped.
+
+This can also just be a healthy short term movement in the opposite direction - but at times sets obvious trend shifts.
+
+## Volume Tracking
+You can shift-click any candle to get the volume of that candle (in the pair token/stock), if you click and drag - you will see the volume for that range.
+
+## Bollinger Bands
+Bollinger Bands can be enabled in the settings via the toggle. 
+
+Bollinger Bands are designed to discover opportunities that give investors a higher probability of properly identifying when an asset is oversold (bottom lines) or overbought (top lines).
+
+>There are three lines that compose Bollinger Bands: A simple moving average (middle band) and an upper and lower band.
+
+>The upper and lower bands are typically 2 standard deviations +/- from a 20-day simple moving average, but they can be modified.
+
+## Up/Down Volume Analysis
+Quickly lets you check whether the market is buying or selling. 
+
+Volume Analysis can be enabled via a toggle in the settings, you can also change the colours & opacity of the bars.
+
+Buy volume is above 0 (positive), sell volume is below 0 (-negative) on the chart. 
+
+It will show the Buy + Sell volume for each candle on the timeframe you are viewing.
+
+## MA 50, 200, 800
+Moving Averages help to work out the current trend / direction. (eg, often; above 200 = bullish, below 200 = bearish). I tend to watch the 50+200 day MA locations and crossovers as primary trendlines for general use. 
+
+## Psy Levels, Daily Hi/Lo & opens
+Psychological & daily levels help to confirm, or find pivot points. 
+
+I personally switch these off sometimes to reduce the amount of lines on the chart, but can be very useful.
+
+---
 ---
 
 # [Base Indicator](https://github.com/Triex/TriexDev-SuperBuySellTrend-TradingView-Trend-Indicator)
@@ -75,66 +126,6 @@ Also works for traditional markets & commodities etc in the same way / using the
 _You can use this and other indicators to confirm likeliness of a direction change prior to the brighter/confirmation one appearing - but just going by the 2nd(brighter) indicators, I have found it to be surprisingly accurate._
 
 Tends to work well on virtually all timeframes, but personally prefer to use it on 5min,15min,1hr, 4hr, daily, weekly. Will still work for shorter/other timeframes, but may be more accurate on mid ones.
-
---- 
----
-
-# [SBST Plus](https://github.com/Triex/TriexDev-SuperBuySellTrend-TradingView-Trend-Indicator/tree/master/sbst-plus) 
-_Using the "plus" version is optional, if you only want the buy/sell signals - use the "base" version._
-
-[![Chart Snapshot](https://tradingview.com/x/4fzGlOqI)](https://tradingview.com/x/4fzGlOqI)
-_With all the "+" indicators turned on, it may look a little confusing at first glance - but if you switch them on/off you should be able to quickly work out what each one is / means, as well as work out your preferences._
-
-## What are vector candles?
-Vector Candles (inspired to add from TradersReality/MT4) are candles that are color coded to indicate higher volumes, and likely flip points / direction changes, or confirmations.
-
-These are based off of PVSRA (Price, Volume, Support, Resistance Analysis)
-
-PVSRA - From MT4 source:
-
->- Situation "Climax"
->- Bars with volume >= 200% of the average volume of the 10 previous chart TFs, and bars
->- where the product of candle spread x candle volume is >= the highest for the 10 previous
->- chart time TFs.
->- Default Colors:  Bull bars are green and bear bars are red.  
-&nbsp;
->- Situation "Volume Rising Above Average"
->- Bars with volume >= 150% of the average volume of the 10 previous chart TFs.
->- Default Colors:  Bull bars are blue and bear are blue-violet.
-
-A blue or purple bar can mean the chart has reached a top or bottom. 
-High volume bars during a movement can indicate a big movement is coming - or a top/bottom if bulls/bears are unable to break that point - or the volume direction has flipped.
-
-This can also just be a healthy short term movement in the opposite direction - but at times sets obvious trend shifts.
-
-## Volume Tracking
-You can shift-click any candle to get the volume of that candle (in the pair token/stock), if you click and drag - you will see the volume for that range.
-
-## Bollinger Bands
-Bollinger Bands can be enabled in the settings via the toggle. 
-
-Bollinger Bands are designed to discover opportunities that give investors a higher probability of properly identifying when an asset is oversold (bottom lines) or overbought (top lines).
-
->There are three lines that compose Bollinger Bands: A simple moving average (middle band) and an upper and lower band.
-
->The upper and lower bands are typically 2 standard deviations +/- from a 20-day simple moving average, but they can be modified.
-
-## Up/Down Volume Analysis
-Quickly lets you check whether the market is buying or selling. 
-
-Volume Analysis can be enabled via a toggle in the settings, you can also change the colours & opacity of the bars.
-
-Buy volume is above 0 (positive), sell volume is below 0 (-negative) on the chart. 
-
-It will show the Buy + Sell volume for each candle on the timeframe you are viewing.
-
-## MA 50, 200, 800
-Moving Averages help to work out the current trend / direction. (eg, often; above 200 = bullish, below 200 = bearish). I tend to watch the 50+200 day MA locations and crossovers as primary trendlines for general use. 
-
-## Psy Levels, Daily Hi/Lo & opens
-Psychological & daily levels help to confirm, or find pivot points. 
-
-I personally switch these off sometimes to reduce the amount of lines on the chart, but can be very useful.
 
 ---
 ---
